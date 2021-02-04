@@ -1,0 +1,48 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      <h1 class="col-12 d-flex justify-content-center align-items-center">REGISTRO DE USUARIOS</h1>
+      <div class="row formulario">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <form method="post" action="/usuario/guardar">
+
+    
+              <div class="col-12">
+                <p>Introduzca los datos:</p>
+              </div>
+              <div class="col-12">
+                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="nombre"
+                 {{!--  required="required" --}}>
+              </div>
+
+              <div class="col-12">
+                <input id="email" name="emailMal" type="email" class="form-control"
+                  placeholder="correo electrónico" {{!-- required="required" --}}>
+              </div>
+               <div class="col-12">
+                <input id="password" name="password" type="text" class="form-control"
+                  placeholder="contraseña" {{!-- required="required" --}}>
+              </div>
+            
+           
+           
+           
+                <div class="row boton">
+                  <div class="col-12 row d-flex justify-content-center align-items-center">
+                    <button name="submit" type="submit" class="btn btn-secondary">Registrar</button>
+                  </div>
+                </div>
+                 <div class="row">
+                  {{mensaje}}
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

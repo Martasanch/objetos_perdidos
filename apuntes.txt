@@ -1,0 +1,19 @@
+Lo que dependa del data que devuelve la promesa va debajo del resolved (y fuera del return de la promesa). pero dentro de la funcion. Todo lo que no depende del dato tiene que ir antes del return.
+-la promesa se fabrica en donde tenga el proceso que va a tardar (un setimeout, una lectura de un archivo...)
+
+
+HISTORIAS DE USUARIO
+
+1. PANTALLA FORMULARIO DE OBJETO /objetos/nuevo
+	- En en PMV habrá validación en cliente
+	- ACTUALIZACION (validar también en el servidor)
+	- El botón enviar envía el formulario SINCRONAMENTE al servidor /objetos/guardar
+	
+	Si se guarda bien, se  muestra el listado /objetos/listado
+	Si no se guarda bien, se muestra mensaje de error /objetos/nuevo con error
+
+	NOTA: Cuando se guarde un objeto, se genera un ID único para el objeto
+	
+2. PANTALLA DE LISTADO DE OBJETOS /objetos/listado
+	- NOTA: habrá que inyectar al motor de plantillas, el listado de objetos
+	- NOTA: habrá que hacer un foreach para dibujar todos los objetos

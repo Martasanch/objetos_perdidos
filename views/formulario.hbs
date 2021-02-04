@@ -1,0 +1,99 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      <h1 class="col-12 d-flex justify-content-center align-items-center">REGISTRO DE OBJETOS</h1>
+      <div class="row formulario">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <form method="post" action="/objeto/guardar" enctype="multipart/form-data"
+>
+
+            <div class="form-group row persona">
+              <div class="col-12">
+                <p>Introduzca los datos de la persona que le entrega el objeto:</p>
+              </div>
+              <div class="col-xs-12 col-md-6">
+
+                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Introduzca el nombre"
+                  required="required">
+              </div>
+
+              <div class="col-xs-12 col-md-6">
+                <input id="telefono" name="telefono" type="number" class="form-control"
+                  placeholder="Introduzca el teléfono" required="required">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-12">
+                <p>Introduzca los datos del objeto:</p>
+
+
+                <div class="form-group row">
+
+                  <div class="col-12">
+                    <input id="titulo" name="titulo" placeholder="Introduzca una breve descripción" type="text"
+                      class="form-control" required="required">
+                  </div>
+                </div>
+                <div class="form-group row">
+
+                  <div class="col-12">
+                    <textarea id="descripcion" placeholder="Describa detalladamente el objeto" name="descripcion"
+                      cols="40" rows="5" class="form-control" aria-describedby="descripcionHelpBlock"></textarea>
+
+                  </div>
+                </div>
+
+
+                <div class="form-group row">
+
+                  <div class="col-12">
+                    <input id="localizacion" name="localizacion" placeholder="¿Dónde fue encontrado?" type="text"
+                      aria-describedby="localizacionHelpBlock" class="form-control">
+                    <span id="localizacionHelpBlock" class="form-text text-muted">Introduzca ubicación exacta (Calle,
+                      número,
+                      situación, ...)</span>
+                  </div>
+                </div>
+                <div class="form-group row">
+
+                  <div class="col-12">
+                    <input type="date" id="fecha" name="fecha" placeholder="Seleccione fecha de localización"
+                      class="form-control">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="foto" class="col-2 col-form-label">FOTO</label>
+                  <div class="col-10">
+                    <input type="file" id="foto" name="foto">
+                  </div>
+                </div>
+                <div class="form-group row">
+
+                  <div class="col-12">
+                    <input type="text" id="etiquetas" name="etiquetas"
+                      placeholder="Introduzca palabras descriptivas separadas por comas." class="form-control"
+                      aria-describedby="etiquetasHelpBlock">
+                    <span id="etiquetasHelpBlock" class="form-text text-muted">Ejemplo: camiseta, roja, adidas</span>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="offset-5 col-8">
+                    <button name="submit" type="submit" class="btn btn-secondary">Registrar Objeto</button>
+                  </div>
+                </div>
+
+              </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    {{!-- <div class="col-12">
+      {{#if errores}}
+      {{#each error}}
+      <div>{{error}}</div>
+      {{/each}}
+    </div> --}}
+  </div>
+</main>

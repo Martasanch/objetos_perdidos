@@ -1,0 +1,44 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      <h1 class="col-12 d-flex justify-content-center align-items-center">ACCESO DE USUARIOS</h1>
+      <div class="row formulario">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <form method="post" action="/usuario/login">
+
+    
+              <div class="col-12">
+                <p>Introduzca los datos:</p>
+              </div>
+
+              <div class="col-12">
+                <input id="email" name="email" type="email" class="form-control"
+                  placeholder="correo electrónico" {{!-- required="required" --}}>
+              </div>
+               <div class="col-12">
+                <input id="password" name="password" type="text" class="form-control"
+                  placeholder="contraseña" {{!-- required="required" --}}>
+              </div>
+            
+           
+           
+           
+                <div class="row boton">
+                  <div class="col-12 row d-flex justify-content-center align-items-center">
+                    <button name="submit" type="submit" class="btn btn-secondary">Ingresar</button>
+                  </div>
+                </div>
+                 <div class="row">
+                  {{mensaje}}
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
