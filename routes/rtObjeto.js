@@ -6,7 +6,7 @@ const daoObjetos = require("../dao/daoObjetos");
 //Formulario de registro de objeto
 
 rtObjeto.get("/nuevo", function (req, res) {
-  res.render("formulario");
+  res.render("formulario", {nombre:"Hola, "+req.session.usuario, autenticado: req.session.autenticado});
 });
 
 //para capturar del body un archivo foto (importante, poner en form el atributo enctype="multipart/form-data")
@@ -18,7 +18,7 @@ rtObjeto.post("/guardar", function (req, res) {
     let archivo = req.files.foto;
     archivo.mv(`./public/images/${archivo.name}`, (err) => {
       if (err) return res.status(500).send({ message: err });
-      res.render("formulario");
+      res.render("formulario", {mensaje: "objeto guardado con éxito", nombre:"Gracias, "+req.session.usuario, autenticado: req.session.autenticado});
     });
   });
 });
@@ -26,7 +26,7 @@ rtObjeto.post("/guardar", function (req, res) {
 rtObjeto.get("/listar", async function (req, res) {
   let misObjetos = await daoObjetos.listar();
 
-  res.render("listado", { objetosPerdidos: misObjetos });
+  res.render("listado", { objetosPerdidos: misObjetos, autenticado: req.session.autenticado});
 });
 
 module.exports = rtObjeto;

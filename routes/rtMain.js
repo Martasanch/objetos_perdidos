@@ -7,7 +7,7 @@ const fileUpload = require("express-fileupload");
 //Formulario de registro de objeto
 
 rtMain.get("/", function (req, res) {
-  res.render("home");
+  res.render("home", {autenticado: req.session.autenticado});
 });
 
 module.exports = rtMain;

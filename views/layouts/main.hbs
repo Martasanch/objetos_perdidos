@@ -15,7 +15,7 @@
 <body>
   <!-- CABECERA DEL EJERCICIO -->
   <header class="header align-middle justify-content-center">
-    <nav class="navbar navbar-dark navbar-expand-sm"> <a class="navbar-brand" href="/objeto/nuevo"> <img
+    <nav class="navbar navbar-dark navbar-expand-sm"> <a class="navbar-brand" href="/"> <img
           src="/images/lost-and-found.png" width="60" class="d-inline-block align-top" alt="">Lost and Found Office</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
@@ -23,8 +23,14 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav justify-content-end">
           <li class="nav-item"> <a class="nav-link active" id="btnnuevo" href="/objeto/listar">Listado</a> </li>
-            <li class="nav-item"> <a class="nav-link active" id="btnnuevo" href="/usuario/registro">Registrar</a> </li>
+          <li class="nav-item"> <a class="nav-link active" id="btnnuevo" href="/objeto/nuevo">Nuevo Objeto</a> </li>
+           {{#unless autenticado}} 
+           <li class="nav-item"> <a class="nav-link active" id="btnnuevo" href="/usuario/registro">Registrar</a> </li>
             <li class="nav-item"> <a class="nav-link active" id="btnnuevo" href="/usuario/login">Acceder</a> </li>
+            {{/unless}}
+             {{#if autenticado}} 
+            <li class="nav-item"> <a class="nav-link active" id="btnnuevo" href="/usuario/unlogin">Salir</a> </li>
+            {{/if}} 
         </ul>
       </div>
     </nav>

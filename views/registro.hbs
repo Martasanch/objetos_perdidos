@@ -12,29 +12,33 @@
                 <p>Introduzca los datos:</p>
               </div>
               <div class="col-12">
-                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="nombre"
+                <input id="nombre" name="nombre" type="text" class="form-control" placeholder="nombre" 
                  {{!--  required="required" --}}>
+                 {{mensajenombre}}
               </div>
 
               <div class="col-12">
                 <input id="email" name="emailMal" type="email" class="form-control"
-                  placeholder="correo electrónico" {{!-- required="required" --}}>
+                  placeholder="correo electrónico"  {{!-- required="required" --}}>
+                  {{mensajemail}}
+                  {{mensajemailrep}}
               </div>
                <div class="col-12">
                 <input id="password" name="password" type="text" class="form-control"
-                  placeholder="contraseña" {{!-- required="required" --}}>
+                  placeholder="contraseña"  {{!-- required="required" --}}>
+                  {{mensajepass}}
               </div>
             
            
            
            
                 <div class="row boton">
-                  <div class="col-12 row d-flex justify-content-center align-items-center">
-                    <button name="submit" type="submit" class="btn btn-secondary">Registrar</button>
+                  <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button name="submit" class="btn btn-secondary">Registrar</button>
                   </div>
                 </div>
                  <div class="row">
-                  {{mensaje}}
+                  
                 </div>
               </div>
             </div>

@@ -1,3 +1,7 @@
+#botoncito {
+  margin-top: 30px;
+}
+
 body {
   background-image: url("/images/fondo.jpg");
   background-repeat: no-repeat;
@@ -31,18 +35,34 @@ main .container {
   background: #5D98AA;
 }
 
-main .container .row .listado {
+main .container .row
+h4 {
+  margin-bottom: 50px;
+  color: white;
+}
+
+main .container h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+main .container .listado {
   background-color: rgba(245, 245, 245, 0.589);
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-main .container .row .lista {
+main .container .lista {
   background-color: whitesmoke;
   margin: 10px;
   padding: 10px;
   border: solid 1px yellow;
   text-align: left;
+}
+
+main .container .usuario {
+  background-color: whitesmoke;
+  border: solid 1px yellow;
 }
 
 main .container .formulario {
