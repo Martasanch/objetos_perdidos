@@ -3,7 +3,7 @@
   
       <div class="row d-flex align-items-center justify-content-center">
          <div class="col-12 d-flex align-items-center justify-content-center">
-          <h1 class="font-effect-outline">Listado de Objetos</h1>
+          <h1 class="font-effect-outline">LISTADO DE OBJETOS</h1>
         </div>
     
         <div class="row listado">
@@ -14,22 +14,24 @@
                         <img src="{{foto}}"style="width:100%">
                       </div>
                       <div class="col-8">
-                        <div>{{titulo}}</div>
+                        <div id="titulo">{{titulo}}</div>
                         <div>{{descripcion}}</div>
+                        
                       </div>
+                      <div class="col-12">Ref: <a href="/objeto/modificarobjeto/{{_id}}">{{_id}}</a></div>
                     </div>
                   </div>
                   {{/each}}
         </div>
 
-
+         {{#if autenticado}} 
 
         <div class="col-12 d-flex align-items-center justify-content-center mensajes">
           <form method="get" action="/objeto/nuevo">
             <button class= "btn btn-secondary">Registrar un nuevo objeto</button>
             </form>
         </div>
-       
+       {{/if}}
       </div>      
     </div>
   </main>

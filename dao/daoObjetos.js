@@ -11,7 +11,7 @@ console.log(nuevoObjeto)
 })
 
 }
-//list
+//listar
 daoObjetos.listar=function find(){
     return new Promise((resolved, rejet)=>{
         resolved(Objeto.find().lean())
@@ -19,10 +19,40 @@ daoObjetos.listar=function find(){
 
 }
 
-//findBy
+//findByID
+daoObjetos.encontrarporId=function buscarporId(id){
+    return new Promise((resolved, rejet)=>{
+        resolved(Objeto.findOne({_id:id}).lean())
+    })
 
+}
 
+//Modificar
+daoObjetos.modificar=function update(objeto){
+    return new Promise((resolved, rejet)=>{
+   Objeto.findByIdAndUpdate(
+       objeto._id,
+       objeto
+   ).then(err=>{
+       if(err) console.log(err)
+      resolved('Actualizado Correctamente')
+ 
+   })
+})
 
-//delete
+}
+
+//Eliminar
+daoObjetos.eliminar=function borrar(id){
+    return new Promise((resolved, rejet)=>{
+    findOneAndRemove(id)
+    .then(err=>{
+        if(err) console.log(err)
+       resolved('Borrado Correctamente')
+  
+    })
+})
+
+}
 
 module.exports=daoObjetos
